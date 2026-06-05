@@ -46,7 +46,10 @@ Mabo v. Queensland [1992] 175 C.L.R. 1	AGLC4-CASE-001,AGLC4-CASE-002,AGLC4-CASE-
 Mabo v Queensland 175 CLR 1	-
 Mabo v Queensland (1992) 175 CLR	-
 
-# FedCFamC identifiers (post-2021 family-law/general-federal, added 2026-06-05)
-Smith & Jones [2022] FedCFamC1A 7	-
-Smith & Jones (2022) FedCFamC1A 7	AGLC4-CASE-006
-Lim & Zhao [2024] FedCFamC2F 1310	-
+# FedCFamC identifiers (post-2021 family-law/general-federal, added 2026-06-05).
+# Published decisions only (court-assigned pseudonyms; public on AustLII);
+# both verified in the 2026-06-03 authority-verification run. The CASE-006
+# row is a deliberately malformed bracket variant of the real citation.
+Radecki & Radecki [2024] FedCFamC1A 246	-
+Radecki & Radecki (2024) FedCFamC1A 246	AGLC4-CASE-006
+Bruin & Bruin (No 4) [2024] FedCFamC2F 870	-
