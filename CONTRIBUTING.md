@@ -1,4 +1,4 @@
-# Contributing to aglc4-lsp
+# Contributing to cite-lint
 
 Thanks for your interest. This project values **correctness and trust** above
 velocity: a citation linter that is confidently wrong is worse than useless. Please

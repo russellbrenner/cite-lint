@@ -1,0 +1,24 @@
+# cite-lint edition metadata — AGLC 4th edition.
+# This file is committed; the PDF it points to is NOT (see scripts/fetch-source.sh).
+
+[edition]
+id        = "aglc4"
+label     = "Australian Guide to Legal Citation (4th ed)"
+year      = 2018
+publisher = "Melbourne University Law Review Association Inc & Melbourne Journal of International Law Inc"
+current   = true   # default edition the engine loads
+
+[source]
+# Official, freely-downloadable PDF. Fetched, not redistributed.
+url        = "https://law.unimelb.edu.au/__data/assets/pdf_file/0005/3181325/AGLC4-with-Bookmarks-1.pdf"
+sha256     = "de129a7ccca99e3b464f9faf7e7a401dee05089f3b9992842428d7878bc8b123"
+size_bytes = 3412024
+pages      = 336
+fetched    = "2026-06-05"
+# AES-encrypted with permissions print:no copy:no change:no; opens with an empty
+# user password. Ingestion must decrypt-with-empty-password before text extraction.
+encrypted  = true
+
+[citation]
+# AGLC self-citation, for attribution in diagnostics and the NOTICE file.
+text = "Melbourne University Law Review Association Inc and Melbourne Journal of International Law Inc, Australian Guide to Legal Citation (4th ed, 2018)"

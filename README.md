@@ -1,4 +1,4 @@
-# aglc4-lsp
+# cite-lint
 
 A fast LSP server and CLI linter for the Australian Guide to Legal Citation (4th ed).
 

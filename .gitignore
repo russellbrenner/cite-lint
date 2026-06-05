@@ -5,3 +5,6 @@
 # Claude working docs are NOT committed (CLAUDE.md at repo root is the exception).
 /.claude/
 /docs/superpowers/
+
+# Fetched source PDFs + ingestion build artifacts (never committed: copyright / derivative risk)
+/.cache/
