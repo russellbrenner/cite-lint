@@ -6,8 +6,11 @@
 # references vocabulary tables (via the checks); it never inlines them
 # (invariant 2). Codes are append-only and never reused.
 #
-# Provenance (P9): hand-authored M1 seed, pending verification against the
-# AGLC4 PDF; plan 02 ingestion will audit rule references page-by-page.
+# Provenance (P9): hand-authored M1 seed. Rule references adversarially
+# verified 2026-06-05 against the Melbourne Law School AGLC4 PDF mirror and
+# six university libguides (UWA, Deakin, SCU, Notre Dame, UTS, Murdoch);
+# four refs corrected (001: 2.2.4->2.2.1, 002: 2.1.1->2.1.11, 004: 2.2->2.2.5,
+# 007: 2.2.4->2.2.1). Plan 02 ingestion will audit page-by-page against the PDF.
 
 [[rule]]
 id = "AGLC4-CASE-001"
@@ -18,12 +21,12 @@ confidence = "high"
 message = "year bracket should be {expected} for {reporter}: found {found}"
 fix = "swap-year-bracket"
 [rule.aglc_ref]
-rule = "2.2.4"
+rule = "2.2.1"
 anchor = "Part 2 - Cases: year and volume"
 [rule.provenance]
 method = "hand-authored"
-anchor = "AGLC4 r 2.2.4: volumed series take round brackets; year-organised series take square brackets"
-reviewer = "drafted claude-opus-4.8 2026-06-05; pending human verification"
+anchor = "AGLC4 r 2.2.1 (Year and Volume): volumed series take round brackets; year-organised series take square brackets"
+reviewer = "drafted claude-opus-4.8 2026-06-05; ref verified vs AGLC4 PDF + libguides 2026-06-05 (2.2.4 was Starting Page)"
 
 [[rule]]
 id = "AGLC4-CASE-002"
@@ -34,12 +37,12 @@ confidence = "high"
 message = "parties should be separated by an unpunctuated lowercase 'v': found '{found}'"
 fix = "normalise-party-separator"
 [rule.aglc_ref]
-rule = "2.1.1"
-anchor = "Part 2 - Cases: case name"
+rule = "2.1.11"
+anchor = "Part 2 - Cases: party separator"
 [rule.provenance]
 method = "hand-authored"
-anchor = "AGLC4 r 2.1.1: parties separated by 'v' (no full stop)"
-reviewer = "drafted claude-opus-4.8 2026-06-05; pending human verification"
+anchor = "AGLC4 r 2.1.11: parties separated by 'v' (general) / '&' (family law); no full stop per r 1.6.1"
+reviewer = "drafted claude-opus-4.8 2026-06-05; ref verified vs libguides 2026-06-05 (2.1.1 is party naming, not separator)"
 
 [[rule]]
 id = "AGLC4-CASE-003"
@@ -50,12 +53,12 @@ confidence = "high"
 message = "report series abbreviations take no full stops: found '{found}', expected '{expected}'"
 fix = "strip-reporter-dots"
 [rule.aglc_ref]
-rule = "1.6"
+rule = "1.6.1"
 anchor = "Part 1 - General Rules: full stops in abbreviations"
 [rule.provenance]
 method = "hand-authored"
-anchor = "AGLC4 r 1.6: abbreviations take no full stops"
-reviewer = "drafted claude-opus-4.8 2026-06-05; pending human verification"
+anchor = "AGLC4 r 1.6.1 (p 22): full stops are not used in abbreviations or after initials"
+reviewer = "drafted claude-opus-4.8 2026-06-05; ref verified vs AGLC4 PDF + libguides 2026-06-05 (precised 1.6 -> 1.6.1)"
 
 [[rule]]
 id = "AGLC4-CASE-004"
@@ -66,12 +69,12 @@ confidence = "high"
 message = "pinpoint should follow the starting page as ', <pinpoint>': found '{found}'"
 fix = "normalise-pinpoint"
 [rule.aglc_ref]
-rule = "2.2"
+rule = "2.2.5"
 anchor = "Part 2 - Cases: pinpoint references"
 [rule.provenance]
 method = "hand-authored"
-anchor = "AGLC4 Part 2: pinpoint follows page, comma-separated"
-reviewer = "drafted claude-opus-4.8 2026-06-05; pending human verification"
+anchor = "AGLC4 r 2.2.5 (reported-case pinpoint); comma + space before pinpoint per r 1.1.6-1.1.7"
+reviewer = "drafted claude-opus-4.8 2026-06-05; ref verified vs libguides 2026-06-05 (bare 2.2 was the whole reported-cases section)"
 
 [[rule]]
 id = "AGLC4-CASE-005"
@@ -112,12 +115,12 @@ severity = "error"
 confidence = "high"
 message = "{reporter} is organised by volume: a volume number must precede the series abbreviation"
 [rule.aglc_ref]
-rule = "2.2.4"
+rule = "2.2.1"
 anchor = "Part 2 - Cases: year and volume"
 [rule.provenance]
 method = "hand-authored"
-anchor = "AGLC4 r 2.2.4: volumed series cite (year) volume series page"
-reviewer = "drafted claude-opus-4.8 2026-06-05; pending human verification"
+anchor = "AGLC4 r 2.2.1 (Year and Volume): volumed series cite (year) volume series page"
+reviewer = "drafted claude-opus-4.8 2026-06-05; ref verified vs AGLC4 PDF + libguides 2026-06-05 (2.2.4 was Starting Page)"
 
 # Note: a court-id-known rule (the medium-neutral analogue of CASE-005) is
 # deliberately absent: under the M1 disambiguation order a citation is only

@@ -74,7 +74,7 @@ fn bracketed(value: u32, b: YearBracket) -> String {
 }
 
 /// AGLC4-CASE-001: a reported citation's year bracket must match the
-/// series' organisation (AGLC4 r 2.2.4).
+/// series' organisation (AGLC4 r 2.2.1).
 fn year_bracket_matches_reporter(c: &Citation, tables: &EditionTables) -> Option<CheckOutcome> {
     let CitationKind::Reported(r) = &c.kind else {
         return None;
@@ -93,7 +93,7 @@ fn year_bracket_matches_reporter(c: &Citation, tables: &EditionTables) -> Option
 }
 
 /// AGLC4-CASE-002: parties are separated by an unpunctuated lowercase `v`
-/// (AGLC4 r 2.1.1).
+/// (AGLC4 r 2.1.11).
 fn party_separator_is_v(c: &Citation, _tables: &EditionTables) -> Option<CheckOutcome> {
     let parties = c.parties()?;
     let sep = parties.separator.as_ref()?;
@@ -110,7 +110,7 @@ fn party_separator_is_v(c: &Citation, _tables: &EditionTables) -> Option<CheckOu
 }
 
 /// AGLC4-CASE-003: report series abbreviations take no full stops
-/// (AGLC4 r 1.6).
+/// (AGLC4 r 1.6.1).
 fn no_dots_in_reporter(c: &Citation, _tables: &EditionTables) -> Option<CheckOutcome> {
     let CitationKind::Reported(r) = &c.kind else {
         return None;

@@ -224,7 +224,7 @@ mod tests {
 
     fn rule_src(id: &str) -> String {
         format!(
-            "[[rule]]\nid = \"{id}\"\ntrigger = \"reported-citation\"\ncheck = \"year-bracket-matches-reporter\"\nseverity = \"error\"\nconfidence = \"high\"\nmessage = \"wrong bracket\"\nfix = \"swap-year-bracket\"\n[rule.aglc_ref]\nrule = \"2.2.4\"\nanchor = \"Part 2 - Cases\"\n[rule.provenance]\nmethod = \"hand-authored\"\nanchor = \"r 2.2.4\"\nreviewer = \"test\"\n"
+            "[[rule]]\nid = \"{id}\"\ntrigger = \"reported-citation\"\ncheck = \"year-bracket-matches-reporter\"\nseverity = \"error\"\nconfidence = \"high\"\nmessage = \"wrong bracket\"\nfix = \"swap-year-bracket\"\n[rule.aglc_ref]\nrule = \"2.2.1\"\nanchor = \"Part 2 - Cases\"\n[rule.provenance]\nmethod = \"hand-authored\"\nanchor = \"r 2.2.1\"\nreviewer = \"test\"\n"
         )
     }
 
@@ -236,7 +236,7 @@ mod tests {
         assert_eq!(rules[0].trigger, Trigger::ReportedCitation);
         assert_eq!(rules[0].severity, Severity::Error);
         assert_eq!(rules[0].fix.as_deref(), Some("swap-year-bracket"));
-        assert_eq!(rules[0].aglc_ref.rule, "2.2.4");
+        assert_eq!(rules[0].aglc_ref.rule, "2.2.1");
     }
 
     #[test]

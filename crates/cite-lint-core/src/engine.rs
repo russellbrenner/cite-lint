@@ -209,7 +209,7 @@ mod tests {
         assert_eq!(d.code.0, "AGLC4-CASE-001");
         assert_eq!(d.severity, Severity::Error);
         assert_eq!(d.confidence, Confidence::High);
-        assert!(d.message.contains("AGLC4 r 2.2.4"), "{}", d.message);
+        assert!(d.message.contains("AGLC4 r 2.2.1"), "{}", d.message);
         let fix = d.fix.as_ref().expect("fix-it");
         assert_eq!(fix.replacement, "(1992)");
     }
@@ -295,7 +295,7 @@ mod tests {
     fn explain_finds_rules_by_code() {
         let (_, rules) = setup();
         let r = rules.rule("AGLC4-CASE-001").expect("known code");
-        assert_eq!(r.aglc_ref.rule, "2.2.4");
+        assert_eq!(r.aglc_ref.rule, "2.2.1");
         assert!(rules.rule("AGLC4-CASE-999").is_none());
     }
 }

@@ -1,8 +1,13 @@
 # AGLC4 court vocabulary: unique court identifiers as used in medium-neutral
 # citations (AGLC4 r 2.3.1), with jurisdiction and full name.
 #
-# Provenance (P9): hand-authored M1 seed, pending verification against the
-# AGLC4 PDF. Plan 02 ingestion will audit and extend.
+# Provenance (P9): hand-authored M1 seed. Six federal/family entries verified
+# 2026-06-05 against AGLC4 Appendix B reproductions (USC, ECU, Newcastle, ANU
+# libguides); all confirmed. Plan 02 ingestion will audit page-by-page.
+#
+# Note: FamCA/FamCAFC identify the Family Court of Australia, abolished
+# 1 September 2021 (merged into the FedCFamC) — valid for pre-2021 judgments
+# only. Post-2021 family-law citations use the FedCFamC identifiers below.
 
 [[court]]
 id = "HCA"
@@ -183,3 +188,48 @@ medium_neutral = true
 method = "hand-authored"
 anchor = "AGLC4 r 2.3.1 (medium neutral citation: unique court identifiers)"
 reviewer = "drafted claude-opus-4.8 2026-06-05; pending human verification"
+
+# Federal Circuit and Family Court of Australia (from 1 September 2021).
+# Identifiers post-date the AGLC4 print edition (2018) but follow its
+# r 2.3.1 medium-neutral convention and are the only valid identifiers for
+# post-2021 family-law and general federal judgments.
+
+[[court]]
+id = "FedCFamC1A"
+full = "Federal Circuit and Family Court of Australia (Division 1) Appellate Jurisdiction"
+jurisdiction = "Cth"
+medium_neutral = true
+[court.provenance]
+method = "hand-authored"
+anchor = "AGLC4 r 2.3.1 convention; FedCFamC established 1 Sep 2021 (post-dates AGLC4 print)"
+reviewer = "added claude-opus-4.8 2026-06-05; verified vs QUT libguide court-identifier table"
+
+[[court]]
+id = "FedCFamC1F"
+full = "Federal Circuit and Family Court of Australia (Division 1) First Instance"
+jurisdiction = "Cth"
+medium_neutral = true
+[court.provenance]
+method = "hand-authored"
+anchor = "AGLC4 r 2.3.1 convention; FedCFamC established 1 Sep 2021 (post-dates AGLC4 print)"
+reviewer = "added claude-opus-4.8 2026-06-05; verified vs QUT libguide court-identifier table"
+
+[[court]]
+id = "FedCFamC2F"
+full = "Federal Circuit and Family Court of Australia (Division 2) Family Law"
+jurisdiction = "Cth"
+medium_neutral = true
+[court.provenance]
+method = "hand-authored"
+anchor = "AGLC4 r 2.3.1 convention; FedCFamC established 1 Sep 2021 (post-dates AGLC4 print)"
+reviewer = "added claude-opus-4.8 2026-06-05; verified vs QUT libguide court-identifier table"
+
+[[court]]
+id = "FedCFamC2G"
+full = "Federal Circuit and Family Court of Australia (Division 2) General Federal Law"
+jurisdiction = "Cth"
+medium_neutral = true
+[court.provenance]
+method = "hand-authored"
+anchor = "AGLC4 r 2.3.1 convention; FedCFamC established 1 Sep 2021 (post-dates AGLC4 print)"
+reviewer = "added claude-opus-4.8 2026-06-05; verified vs QUT libguide court-identifier table"

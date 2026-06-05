@@ -43,7 +43,7 @@ fn check_flags_the_memo_fixture_and_exits_1() {
         "compliant citation flagged:\n{text}"
     );
     // Messages name their AGLC4 rule (correctness guardrail).
-    assert!(text.contains("AGLC4 r 2.2.4"), "{text}");
+    assert!(text.contains("AGLC4 r 2.2.1"), "{text}");
 }
 
 #[test]
@@ -80,7 +80,7 @@ fn check_json_emits_the_versioned_schema() {
         "{json}"
     );
     assert!(json.contains("\"code\":\"AGLC4-CASE-001\""), "{json}");
-    assert!(json.contains("\"aglc_rule\":\"2.2.4\""), "{json}");
+    assert!(json.contains("\"aglc_rule\":\"2.2.1\""), "{json}");
     assert!(json.trim_end().ends_with('}'), "{json}");
 }
 
@@ -120,7 +120,7 @@ fn explain_shows_rule_metadata_and_provenance() {
         .expect("binary runs");
     assert_eq!(out.status.code(), Some(0));
     let text = stdout(&out);
-    assert!(text.contains("2.2.4"), "{text}");
+    assert!(text.contains("2.2.1"), "{text}");
     assert!(text.contains("provenance:"), "{text}");
 }
 

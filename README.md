@@ -22,7 +22,7 @@ target/debug/cite-lint check --format json -      # JSON from stdin, for CI
 
 ```text
 $ cite-lint check memo.md
-memo.md:9:31: error[AGLC4-CASE-001] year bracket should be round brackets for CLR: found square brackets (AGLC4 r 2.2.4)
+memo.md:9:31: error[AGLC4-CASE-001] year bracket should be round brackets for CLR: found square brackets (AGLC4 r 2.2.1)
     fix-it: '(1992)'
 ```
 

@@ -40,7 +40,7 @@ impl Provenance {
 
 /// Whether a report series encloses the year in round or square brackets.
 ///
-/// AGLC4 rule 2.2.4: series organised by volume number take round brackets
+/// AGLC4 rule 2.2.1: series organised by volume number take round brackets
 /// around the year; series organised by year (where the year identifies the
 /// volume) take square brackets.
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
@@ -72,7 +72,7 @@ pub struct Reporter {
     pub abbrev: String,
     /// Full series name (e.g. `Commonwealth Law Reports`).
     pub full: String,
-    /// Bracket style the series takes around the year (AGLC4 r 2.2.4).
+    /// Bracket style the series takes around the year (AGLC4 r 2.2.1).
     pub year_bracket: YearBracket,
     /// Court the series is authorised for, when single-court (court id).
     pub court: Option<String>,
