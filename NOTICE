@@ -1,0 +1,12 @@
+aglc4-lsp
+Copyright 2026 Russell Brenner and contributors
+
+This product is licensed under the Apache License, Version 2.0 (see LICENSE).
+
+This software checks legal citations for compliance with the Australian Guide to
+Legal Citation (4th ed) ("AGLC4"), published by the Melbourne University Law Review
+Association Inc in collaboration with the Melbourne Journal of International Law Inc.
+AGLC4 itself is a separate copyrighted work and is not distributed with, or licensed
+by, this project. Citation rules and controlled vocabularies referenced by this
+software are derived from the publicly available AGLC4 guide and are used to check
+conformance, not to reproduce the guide.

@@ -1,4 +1,7 @@
 /target
 **/*.rs.bk
-Cargo.lock
 .DS_Store
+
+# Claude working docs are NOT committed (CLAUDE.md at repo root is the exception).
+/.claude/
+/docs/superpowers/
