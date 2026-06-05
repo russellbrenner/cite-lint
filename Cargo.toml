@@ -1,0 +1,31 @@
+# cite-lint workspace — see CLAUDE.md for the architectural invariants and
+# docs/roadmap/ for the plan of record.
+#
+# Dependency policy (P7, plan 08): zero external dependencies in the M1 slice.
+# Every crate here is std-only, which keeps `cargo-deny` trivially clean, the
+# build reproducible, and the engine free of supply-chain surface. Crate
+# adoptions (chumsky, tree-sitter, clap, serde) are gated on their research
+# spikes — see docs/adr/0001-m1-provisional-choices.md.
+
+[workspace]
+resolver = "2"
+members = [
+    "crates/cite-lint-data",
+    "crates/cite-lint-core",
+    "crates/cite-lint-host",
+    "crates/cite-lint",
+    "crates/cite-lint-cli",
+    "crates/cite-lint-lsp",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "Apache-2.0"
+repository = "https://github.com/russellbrenner/cite-lint"
+authors = ["Russell Brenner and contributors"]
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
+strip = true

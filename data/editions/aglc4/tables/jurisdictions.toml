@@ -1,0 +1,77 @@
+# AGLC4 jurisdiction abbreviations (as used in legislation citations and
+# court/reporter metadata).
+#
+# Provenance (P9): hand-authored M1 seed, pending verification against the
+# AGLC4 PDF.
+
+[[jurisdiction]]
+abbrev = "Cth"
+full = "Commonwealth"
+[jurisdiction.provenance]
+method = "hand-authored"
+anchor = "AGLC4 r 3.1.3 (jurisdiction abbreviations)"
+reviewer = "drafted claude-opus-4.8 2026-06-05; pending human verification"
+
+[[jurisdiction]]
+abbrev = "NSW"
+full = "New South Wales"
+[jurisdiction.provenance]
+method = "hand-authored"
+anchor = "AGLC4 r 3.1.3 (jurisdiction abbreviations)"
+reviewer = "drafted claude-opus-4.8 2026-06-05; pending human verification"
+
+[[jurisdiction]]
+abbrev = "Vic"
+full = "Victoria"
+[jurisdiction.provenance]
+method = "hand-authored"
+anchor = "AGLC4 r 3.1.3 (jurisdiction abbreviations)"
+reviewer = "drafted claude-opus-4.8 2026-06-05; pending human verification"
+
+[[jurisdiction]]
+abbrev = "Qld"
+full = "Queensland"
+[jurisdiction.provenance]
+method = "hand-authored"
+anchor = "AGLC4 r 3.1.3 (jurisdiction abbreviations)"
+reviewer = "drafted claude-opus-4.8 2026-06-05; pending human verification"
+
+[[jurisdiction]]
+abbrev = "SA"
+full = "South Australia"
+[jurisdiction.provenance]
+method = "hand-authored"
+anchor = "AGLC4 r 3.1.3 (jurisdiction abbreviations)"
+reviewer = "drafted claude-opus-4.8 2026-06-05; pending human verification"
+
+[[jurisdiction]]
+abbrev = "WA"
+full = "Western Australia"
+[jurisdiction.provenance]
+method = "hand-authored"
+anchor = "AGLC4 r 3.1.3 (jurisdiction abbreviations)"
+reviewer = "drafted claude-opus-4.8 2026-06-05; pending human verification"
+
+[[jurisdiction]]
+abbrev = "Tas"
+full = "Tasmania"
+[jurisdiction.provenance]
+method = "hand-authored"
+anchor = "AGLC4 r 3.1.3 (jurisdiction abbreviations)"
+reviewer = "drafted claude-opus-4.8 2026-06-05; pending human verification"
+
+[[jurisdiction]]
+abbrev = "ACT"
+full = "Australian Capital Territory"
+[jurisdiction.provenance]
+method = "hand-authored"
+anchor = "AGLC4 r 3.1.3 (jurisdiction abbreviations)"
+reviewer = "drafted claude-opus-4.8 2026-06-05; pending human verification"
+
+[[jurisdiction]]
+abbrev = "NT"
+full = "Northern Territory"
+[jurisdiction.provenance]
+method = "hand-authored"
+anchor = "AGLC4 r 3.1.3 (jurisdiction abbreviations)"
+reviewer = "drafted claude-opus-4.8 2026-06-05; pending human verification"

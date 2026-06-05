@@ -1,0 +1,185 @@
+# AGLC4 court vocabulary: unique court identifiers as used in medium-neutral
+# citations (AGLC4 r 2.3.1), with jurisdiction and full name.
+#
+# Provenance (P9): hand-authored M1 seed, pending verification against the
+# AGLC4 PDF. Plan 02 ingestion will audit and extend.
+
+[[court]]
+id = "HCA"
+full = "High Court of Australia"
+jurisdiction = "Cth"
+medium_neutral = true
+[court.provenance]
+method = "hand-authored"
+anchor = "AGLC4 r 2.3.1 (medium neutral citation: unique court identifiers)"
+reviewer = "drafted claude-opus-4.8 2026-06-05; pending human verification"
+
+[[court]]
+id = "FCA"
+full = "Federal Court of Australia"
+jurisdiction = "Cth"
+medium_neutral = true
+[court.provenance]
+method = "hand-authored"
+anchor = "AGLC4 r 2.3.1 (medium neutral citation: unique court identifiers)"
+reviewer = "drafted claude-opus-4.8 2026-06-05; pending human verification"
+
+[[court]]
+id = "FCAFC"
+full = "Federal Court of Australia (Full Court)"
+jurisdiction = "Cth"
+medium_neutral = true
+[court.provenance]
+method = "hand-authored"
+anchor = "AGLC4 r 2.3.1 (medium neutral citation: unique court identifiers)"
+reviewer = "drafted claude-opus-4.8 2026-06-05; pending human verification"
+
+[[court]]
+id = "FamCA"
+full = "Family Court of Australia"
+jurisdiction = "Cth"
+medium_neutral = true
+[court.provenance]
+method = "hand-authored"
+anchor = "AGLC4 r 2.3.1 (medium neutral citation: unique court identifiers)"
+reviewer = "drafted claude-opus-4.8 2026-06-05; pending human verification"
+
+[[court]]
+id = "FamCAFC"
+full = "Family Court of Australia (Full Court)"
+jurisdiction = "Cth"
+medium_neutral = true
+[court.provenance]
+method = "hand-authored"
+anchor = "AGLC4 r 2.3.1 (medium neutral citation: unique court identifiers)"
+reviewer = "drafted claude-opus-4.8 2026-06-05; pending human verification"
+
+[[court]]
+id = "NSWSC"
+full = "Supreme Court of New South Wales"
+jurisdiction = "NSW"
+medium_neutral = true
+[court.provenance]
+method = "hand-authored"
+anchor = "AGLC4 r 2.3.1 (medium neutral citation: unique court identifiers)"
+reviewer = "drafted claude-opus-4.8 2026-06-05; pending human verification"
+
+[[court]]
+id = "NSWCA"
+full = "Court of Appeal of New South Wales"
+jurisdiction = "NSW"
+medium_neutral = true
+[court.provenance]
+method = "hand-authored"
+anchor = "AGLC4 r 2.3.1 (medium neutral citation: unique court identifiers)"
+reviewer = "drafted claude-opus-4.8 2026-06-05; pending human verification"
+
+[[court]]
+id = "NSWCCA"
+full = "Court of Criminal Appeal of New South Wales"
+jurisdiction = "NSW"
+medium_neutral = true
+[court.provenance]
+method = "hand-authored"
+anchor = "AGLC4 r 2.3.1 (medium neutral citation: unique court identifiers)"
+reviewer = "drafted claude-opus-4.8 2026-06-05; pending human verification"
+
+[[court]]
+id = "VSC"
+full = "Supreme Court of Victoria"
+jurisdiction = "Vic"
+medium_neutral = true
+[court.provenance]
+method = "hand-authored"
+anchor = "AGLC4 r 2.3.1 (medium neutral citation: unique court identifiers)"
+reviewer = "drafted claude-opus-4.8 2026-06-05; pending human verification"
+
+[[court]]
+id = "VSCA"
+full = "Court of Appeal of the Supreme Court of Victoria"
+jurisdiction = "Vic"
+medium_neutral = true
+[court.provenance]
+method = "hand-authored"
+anchor = "AGLC4 r 2.3.1 (medium neutral citation: unique court identifiers)"
+reviewer = "drafted claude-opus-4.8 2026-06-05; pending human verification"
+
+[[court]]
+id = "QSC"
+full = "Supreme Court of Queensland"
+jurisdiction = "Qld"
+medium_neutral = true
+[court.provenance]
+method = "hand-authored"
+anchor = "AGLC4 r 2.3.1 (medium neutral citation: unique court identifiers)"
+reviewer = "drafted claude-opus-4.8 2026-06-05; pending human verification"
+
+[[court]]
+id = "QCA"
+full = "Court of Appeal of the Supreme Court of Queensland"
+jurisdiction = "Qld"
+medium_neutral = true
+[court.provenance]
+method = "hand-authored"
+anchor = "AGLC4 r 2.3.1 (medium neutral citation: unique court identifiers)"
+reviewer = "drafted claude-opus-4.8 2026-06-05; pending human verification"
+
+[[court]]
+id = "SASC"
+full = "Supreme Court of South Australia"
+jurisdiction = "SA"
+medium_neutral = true
+[court.provenance]
+method = "hand-authored"
+anchor = "AGLC4 r 2.3.1 (medium neutral citation: unique court identifiers)"
+reviewer = "drafted claude-opus-4.8 2026-06-05; pending human verification"
+
+[[court]]
+id = "WASC"
+full = "Supreme Court of Western Australia"
+jurisdiction = "WA"
+medium_neutral = true
+[court.provenance]
+method = "hand-authored"
+anchor = "AGLC4 r 2.3.1 (medium neutral citation: unique court identifiers)"
+reviewer = "drafted claude-opus-4.8 2026-06-05; pending human verification"
+
+[[court]]
+id = "WASCA"
+full = "Court of Appeal of the Supreme Court of Western Australia"
+jurisdiction = "WA"
+medium_neutral = true
+[court.provenance]
+method = "hand-authored"
+anchor = "AGLC4 r 2.3.1 (medium neutral citation: unique court identifiers)"
+reviewer = "drafted claude-opus-4.8 2026-06-05; pending human verification"
+
+[[court]]
+id = "TASSC"
+full = "Supreme Court of Tasmania"
+jurisdiction = "Tas"
+medium_neutral = true
+[court.provenance]
+method = "hand-authored"
+anchor = "AGLC4 r 2.3.1 (medium neutral citation: unique court identifiers)"
+reviewer = "drafted claude-opus-4.8 2026-06-05; pending human verification"
+
+[[court]]
+id = "ACTSC"
+full = "Supreme Court of the Australian Capital Territory"
+jurisdiction = "ACT"
+medium_neutral = true
+[court.provenance]
+method = "hand-authored"
+anchor = "AGLC4 r 2.3.1 (medium neutral citation: unique court identifiers)"
+reviewer = "drafted claude-opus-4.8 2026-06-05; pending human verification"
+
+[[court]]
+id = "NTSC"
+full = "Supreme Court of the Northern Territory"
+jurisdiction = "NT"
+medium_neutral = true
+[court.provenance]
+method = "hand-authored"
+anchor = "AGLC4 r 2.3.1 (medium neutral citation: unique court identifiers)"
+reviewer = "drafted claude-opus-4.8 2026-06-05; pending human verification"

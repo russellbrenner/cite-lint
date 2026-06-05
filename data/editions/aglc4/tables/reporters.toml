@@ -1,0 +1,180 @@
+# AGLC4 law report series vocabulary (invariant 2: data before rules).
+#
+# year_bracket: "round" = series organised by volume number, year in round
+# brackets, e.g. (1992) 175 CLR 1; "square" = series organised by year, year
+# in square brackets identifying the volume, e.g. [1969] VR 403 (AGLC4 r 2.2.4).
+#
+# Provenance (P9): every row records how it was produced, the AGLC4 anchor it
+# derives from, and its review status. Hand-authored M1 seed rows are pending
+# verification against the AGLC4 PDF (plan 02's ingestion oracle will audit
+# and extend this table). Do not add rows without provenance — the schema
+# loader rejects them.
+
+[[reporter]]
+abbrev = "CLR"
+full = "Commonwealth Law Reports"
+year_bracket = "round"
+court = "HCA"
+jurisdiction = "Cth"
+[reporter.provenance]
+method = "hand-authored"
+anchor = "AGLC4 Appendix A (law report series); r 2.2.4 (year and volume)"
+reviewer = "drafted claude-opus-4.8 2026-06-05; pending human verification"
+
+[[reporter]]
+abbrev = "ALJR"
+full = "Australian Law Journal Reports"
+year_bracket = "round"
+court = "HCA"
+jurisdiction = "Cth"
+[reporter.provenance]
+method = "hand-authored"
+anchor = "AGLC4 Appendix A (law report series)"
+reviewer = "drafted claude-opus-4.8 2026-06-05; pending human verification"
+
+[[reporter]]
+abbrev = "ALR"
+full = "Australian Law Reports"
+year_bracket = "round"
+jurisdiction = "Cth"
+[reporter.provenance]
+method = "hand-authored"
+anchor = "AGLC4 Appendix A (law report series)"
+reviewer = "drafted claude-opus-4.8 2026-06-05; pending human verification"
+
+[[reporter]]
+abbrev = "FCR"
+full = "Federal Court Reports"
+year_bracket = "round"
+court = "FCA"
+jurisdiction = "Cth"
+[reporter.provenance]
+method = "hand-authored"
+anchor = "AGLC4 Appendix A (law report series)"
+reviewer = "drafted claude-opus-4.8 2026-06-05; pending human verification"
+
+[[reporter]]
+abbrev = "FLR"
+full = "Federal Law Reports"
+year_bracket = "round"
+jurisdiction = "Cth"
+[reporter.provenance]
+method = "hand-authored"
+anchor = "AGLC4 Appendix A (law report series)"
+reviewer = "drafted claude-opus-4.8 2026-06-05; pending human verification"
+
+[[reporter]]
+abbrev = "Fam LR"
+full = "Family Law Reports"
+year_bracket = "round"
+jurisdiction = "Cth"
+[reporter.provenance]
+method = "hand-authored"
+anchor = "AGLC4 Appendix A (law report series)"
+reviewer = "drafted claude-opus-4.8 2026-06-05; pending human verification"
+
+[[reporter]]
+abbrev = "NSWLR"
+full = "New South Wales Law Reports"
+year_bracket = "round"
+jurisdiction = "NSW"
+[reporter.provenance]
+method = "hand-authored"
+anchor = "AGLC4 Appendix A (law report series)"
+reviewer = "drafted claude-opus-4.8 2026-06-05; pending human verification"
+
+[[reporter]]
+abbrev = "VR"
+full = "Victorian Reports"
+year_bracket = "square"
+jurisdiction = "Vic"
+[reporter.provenance]
+method = "hand-authored"
+anchor = "AGLC4 Appendix A (law report series)"
+reviewer = "drafted claude-opus-4.8 2026-06-05; pending human verification"
+
+[[reporter]]
+abbrev = "Qd R"
+full = "Queensland Reports"
+year_bracket = "square"
+jurisdiction = "Qld"
+[reporter.provenance]
+method = "hand-authored"
+anchor = "AGLC4 Appendix A (law report series)"
+reviewer = "drafted claude-opus-4.8 2026-06-05; pending human verification"
+
+[[reporter]]
+abbrev = "SASR"
+full = "South Australian State Reports"
+year_bracket = "round"
+jurisdiction = "SA"
+[reporter.provenance]
+method = "hand-authored"
+anchor = "AGLC4 Appendix A (law report series)"
+reviewer = "drafted claude-opus-4.8 2026-06-05; pending human verification"
+
+[[reporter]]
+abbrev = "WAR"
+full = "Western Australian Reports"
+year_bracket = "round"
+jurisdiction = "WA"
+[reporter.provenance]
+method = "hand-authored"
+anchor = "AGLC4 Appendix A (law report series); volumed series from 1990"
+reviewer = "drafted claude-opus-4.8 2026-06-05; pending human verification"
+
+# United Kingdom series commonly cited in Australian legal writing.
+
+[[reporter]]
+abbrev = "AC"
+full = "Law Reports Appeal Cases"
+year_bracket = "square"
+[reporter.provenance]
+method = "hand-authored"
+anchor = "AGLC4 Appendix A (law report series); cf r 24 (United Kingdom)"
+reviewer = "drafted claude-opus-4.8 2026-06-05; pending human verification"
+
+[[reporter]]
+abbrev = "QB"
+full = "Law Reports Queen's Bench"
+year_bracket = "square"
+[reporter.provenance]
+method = "hand-authored"
+anchor = "AGLC4 Appendix A (law report series); cf r 24 (United Kingdom)"
+reviewer = "drafted claude-opus-4.8 2026-06-05; pending human verification"
+
+[[reporter]]
+abbrev = "Ch"
+full = "Law Reports Chancery"
+year_bracket = "square"
+[reporter.provenance]
+method = "hand-authored"
+anchor = "AGLC4 Appendix A (law report series); cf r 24 (United Kingdom)"
+reviewer = "drafted claude-opus-4.8 2026-06-05; pending human verification"
+
+[[reporter]]
+abbrev = "WLR"
+full = "Weekly Law Reports"
+year_bracket = "square"
+[reporter.provenance]
+method = "hand-authored"
+anchor = "AGLC4 Appendix A (law report series); cf r 24 (United Kingdom)"
+reviewer = "drafted claude-opus-4.8 2026-06-05; pending human verification"
+
+[[reporter]]
+abbrev = "All ER"
+full = "All England Law Reports"
+year_bracket = "square"
+[reporter.provenance]
+method = "hand-authored"
+anchor = "AGLC4 Appendix A (law report series); cf r 24 (United Kingdom)"
+reviewer = "drafted claude-opus-4.8 2026-06-05; pending human verification"
+
+[[reporter]]
+abbrev = "ER"
+full = "English Reports"
+year_bracket = "round"
+[reporter.provenance]
+method = "hand-authored"
+anchor = "AGLC4 Appendix A (law report series); cf r 24 (United Kingdom)"
+reviewer = "drafted claude-opus-4.8 2026-06-05; pending human verification"

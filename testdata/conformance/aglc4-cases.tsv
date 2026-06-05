@@ -1,0 +1,47 @@
+# AGLC4 conformance corpus — case citations (plan 07 T8 seed).
+# Format: <input citation line> <TAB> <expected diagnostic codes, comma-separated, '-' for none>
+# Edition: aglc4. Each rule ships at least one positive (firing) and one
+# negative (silent) case; the corpus grows per rule per milestone.
+#
+# AGLC4-CASE-001 — year bracket matches reporter (r 2.2.4)
+Mabo v Queensland (No 2) (1992) 175 CLR 1	-
+Mabo v Queensland (No 2) [1992] 175 CLR 1	AGLC4-CASE-001
+Donoghue v Stevenson [1932] AC 562	-
+Donoghue v Stevenson (1932) AC 562	AGLC4-CASE-001
+R v Smith [1969] VR 403	-
+R v Smith (1969) VR 403	AGLC4-CASE-001
+#
+# AGLC4-CASE-002 — party separator is lowercase unpunctuated v (r 2.1.1)
+Mabo v. Queensland (1992) 175 CLR 1	AGLC4-CASE-002
+Mabo vs Queensland (1992) 175 CLR 1	AGLC4-CASE-002
+Mabo V Queensland (1992) 175 CLR 1	AGLC4-CASE-002
+Re Wakim (1999) 198 CLR 511	-
+#
+# AGLC4-CASE-003 — no full stops in report series (r 1.6)
+Mabo v Queensland (1992) 175 C.L.R. 1	AGLC4-CASE-003
+Smith v Smith (1996) 20 Fam LR 1	-
+#
+# AGLC4-CASE-004 — pinpoint follows page as ', pinpoint'
+Plaintiff S157/2002 v Commonwealth (2003) 211 CLR 476, 492	-
+Plaintiff S157/2002 v Commonwealth (2003) 211 CLR 476 492	AGLC4-CASE-004
+#
+# AGLC4-CASE-005 — unknown report series (low confidence, Appendix A)
+X v Y (1992) 12 ZZQ 99	AGLC4-CASE-005
+Wik Peoples v Queensland (1996) 187 CLR 1	-
+#
+# AGLC4-CASE-006 — medium-neutral citations take square brackets (r 2.3.1)
+Love v Commonwealth [2020] HCA 3	-
+Love v Commonwealth (2020) HCA 3	AGLC4-CASE-006
+Smith v Jones [2019] NSWCA 164	-
+#
+# AGLC4-CASE-007 — volumed series require a volume number (r 2.2.4)
+X v Y (1992) CLR 1	AGLC4-CASE-007
+Ruddock v Vadarlis (2001) 110 FCR 491	-
+#
+# Compound violations fire every applicable rule.
+Mabo v. Queensland [1992] 175 C.L.R. 1	AGLC4-CASE-001,AGLC4-CASE-002,AGLC4-CASE-003
+#
+# Malformed inputs recover without diagnostics (no year bracket = gated out;
+# structurally broken = unclassified, never confidently wrong).
+Mabo v Queensland 175 CLR 1	-
+Mabo v Queensland (1992) 175 CLR	-

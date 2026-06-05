@@ -1,0 +1,16 @@
+[package]
+name = "cite-lint-cli"
+description = "The cite-lint CLI: a thin shell over the SDK (plan 06; no linting logic lives here)"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+authors.workspace = true
+
+[[bin]]
+name = "cite-lint"
+path = "src/main.rs"
+
+# Surfaces depend on the SDK facade and nothing below it (P1).
+[dependencies]
+cite-lint = { path = "../cite-lint" }

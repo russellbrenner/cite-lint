@@ -1,0 +1,4 @@
+# Pinned toolchain channel (plan 00 T1). Components cover fmt/clippy/coverage.
+[toolchain]
+channel = "stable"
+components = ["rustfmt", "clippy"]

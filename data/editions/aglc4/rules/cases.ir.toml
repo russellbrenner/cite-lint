@@ -1,0 +1,125 @@
+# Declarative Rule IR — AGLC4 case-citation rules (architecture §5).
+#
+# Each entry binds a trigger to a named check primitive implemented in
+# cite-lint-core's registry, with severity, confidence, a message template,
+# a mandatory AGLC4 reference, and an optional safe fix transform. The IR
+# references vocabulary tables (via the checks); it never inlines them
+# (invariant 2). Codes are append-only and never reused.
+#
+# Provenance (P9): hand-authored M1 seed, pending verification against the
+# AGLC4 PDF; plan 02 ingestion will audit rule references page-by-page.
+
+[[rule]]
+id = "AGLC4-CASE-001"
+trigger = "reported-citation"
+check = "year-bracket-matches-reporter"
+severity = "error"
+confidence = "high"
+message = "year bracket should be {expected} for {reporter}: found {found}"
+fix = "swap-year-bracket"
+[rule.aglc_ref]
+rule = "2.2.4"
+anchor = "Part 2 - Cases: year and volume"
+[rule.provenance]
+method = "hand-authored"
+anchor = "AGLC4 r 2.2.4: volumed series take round brackets; year-organised series take square brackets"
+reviewer = "drafted claude-opus-4.8 2026-06-05; pending human verification"
+
+[[rule]]
+id = "AGLC4-CASE-002"
+trigger = "any-case"
+check = "party-separator-is-v"
+severity = "error"
+confidence = "high"
+message = "parties should be separated by an unpunctuated lowercase 'v': found '{found}'"
+fix = "normalise-party-separator"
+[rule.aglc_ref]
+rule = "2.1.1"
+anchor = "Part 2 - Cases: case name"
+[rule.provenance]
+method = "hand-authored"
+anchor = "AGLC4 r 2.1.1: parties separated by 'v' (no full stop)"
+reviewer = "drafted claude-opus-4.8 2026-06-05; pending human verification"
+
+[[rule]]
+id = "AGLC4-CASE-003"
+trigger = "reported-citation"
+check = "no-dots-in-reporter"
+severity = "error"
+confidence = "high"
+message = "report series abbreviations take no full stops: found '{found}', expected '{expected}'"
+fix = "strip-reporter-dots"
+[rule.aglc_ref]
+rule = "1.6"
+anchor = "Part 1 - General Rules: full stops in abbreviations"
+[rule.provenance]
+method = "hand-authored"
+anchor = "AGLC4 r 1.6: abbreviations take no full stops"
+reviewer = "drafted claude-opus-4.8 2026-06-05; pending human verification"
+
+[[rule]]
+id = "AGLC4-CASE-004"
+trigger = "reported-citation"
+check = "pinpoint-comma-spacing"
+severity = "warning"
+confidence = "high"
+message = "pinpoint should follow the starting page as ', <pinpoint>': found '{found}'"
+fix = "normalise-pinpoint"
+[rule.aglc_ref]
+rule = "2.2"
+anchor = "Part 2 - Cases: pinpoint references"
+[rule.provenance]
+method = "hand-authored"
+anchor = "AGLC4 Part 2: pinpoint follows page, comma-separated"
+reviewer = "drafted claude-opus-4.8 2026-06-05; pending human verification"
+
+[[rule]]
+id = "AGLC4-CASE-005"
+trigger = "reported-citation"
+check = "reporter-known"
+severity = "info"
+confidence = "low"
+message = "could not verify report series '{found}' against the AGLC4 vocabulary"
+[rule.aglc_ref]
+rule = "2.2.3"
+anchor = "Part 2 - Cases: law report series (Appendix A)"
+[rule.provenance]
+method = "hand-authored"
+anchor = "AGLC4 Appendix A: recognised law report series"
+reviewer = "drafted claude-opus-4.8 2026-06-05; pending human verification"
+
+[[rule]]
+id = "AGLC4-CASE-006"
+trigger = "medium-neutral-citation"
+check = "medium-neutral-square-bracket"
+severity = "error"
+confidence = "high"
+message = "medium-neutral citations take square brackets around the year: found {found}"
+fix = "square-year-bracket"
+[rule.aglc_ref]
+rule = "2.3.1"
+anchor = "Part 2 - Cases: medium neutral citations"
+[rule.provenance]
+method = "hand-authored"
+anchor = "AGLC4 r 2.3.1: [year] CourtId Number"
+reviewer = "drafted claude-opus-4.8 2026-06-05; pending human verification"
+
+[[rule]]
+id = "AGLC4-CASE-007"
+trigger = "reported-citation"
+check = "volume-required-for-round-series"
+severity = "error"
+confidence = "high"
+message = "{reporter} is organised by volume: a volume number must precede the series abbreviation"
+[rule.aglc_ref]
+rule = "2.2.4"
+anchor = "Part 2 - Cases: year and volume"
+[rule.provenance]
+method = "hand-authored"
+anchor = "AGLC4 r 2.2.4: volumed series cite (year) volume series page"
+reviewer = "drafted claude-opus-4.8 2026-06-05; pending human verification"
+
+# Note: a court-id-known rule (the medium-neutral analogue of CASE-005) is
+# deliberately absent: under the M1 disambiguation order a citation is only
+# classified medium-neutral when its court id IS in the vocabulary, so the
+# rule could never fire. Revisit when the classification order grows (M3).

@@ -1,0 +1,12 @@
+[package]
+name = "cite-lint-data"
+description = "Versioned AGLC reference data and declarative Rule IR for cite-lint (invariant 2: data before rules)"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+authors.workspace = true
+
+# Zero dependencies by policy for the M1 slice — see workspace Cargo.toml and
+# docs/adr/0001-m1-provisional-choices.md.
+[dependencies]

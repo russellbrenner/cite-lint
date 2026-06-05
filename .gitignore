@@ -1,6 +1,7 @@
 /target
 **/*.rs.bk
 .DS_Store
+.verify.log
 
 # Claude working docs are NOT committed (CLAUDE.md at repo root is the exception).
 /.claude/
