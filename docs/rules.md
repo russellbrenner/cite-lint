@@ -1,4 +1,4 @@
-# cite-lint rule catalogue (aglc4)
+# lintcite rule catalogue (aglc4)
 
 > Generated from the rule registry (P6: docs-from-code). Do not edit by hand — the `rule_catalogue_is_current` test regenerates this content and fails CI when it drifts.
 

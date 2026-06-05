@@ -1,0 +1,15 @@
+[package]
+name = "lintcite"
+description = "AGLC citation linting SDK: the one behaviour surface every CLI/LSP/MCP/binding wraps (P1: parity by construction)"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+authors.workspace = true
+
+# The facade is the single place data + core + host are wired together
+# (architecture §2). Surfaces depend on this crate and nothing below it.
+[dependencies]
+lintcite-core = { path = "../lintcite-core" }
+lintcite-data = { path = "../lintcite-data" }
+lintcite-host = { path = "../lintcite-host" }

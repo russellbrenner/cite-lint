@@ -1,0 +1,11 @@
+[package]
+name = "lintcite-host"
+description = "Host document adapters: locate citation spans and map ranges (plan 04; engine stays host-agnostic)"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+authors.workspace = true
+
+[dependencies]
+lintcite-core = { path = "../lintcite-core" }

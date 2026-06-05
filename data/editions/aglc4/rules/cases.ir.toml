@@ -1,7 +1,7 @@
 # Declarative Rule IR — AGLC4 case-citation rules (architecture §5).
 #
 # Each entry binds a trigger to a named check primitive implemented in
-# cite-lint-core's registry, with severity, confidence, a message template,
+# lintcite-core's registry, with severity, confidence, a message template,
 # a mandatory AGLC4 reference, and an optional safe fix transform. The IR
 # references vocabulary tables (via the checks); it never inlines them
 # (invariant 2). Codes are append-only and never reused.

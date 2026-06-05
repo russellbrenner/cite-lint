@@ -1,0 +1,13 @@
+[package]
+name = "lintcite-core"
+description = "Deterministic citation engine: lexer, parser, typed AST, IR rule engine (invariants 1, 3, 4)"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+authors.workspace = true
+
+# Invariant 1: core depends ONLY on data. Adding lintcite-host or any
+# surface here must fail review and the dependency-graph test.
+[dependencies]
+lintcite-data = { path = "../lintcite-data" }

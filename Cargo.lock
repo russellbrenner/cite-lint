@@ -3,42 +3,42 @@
 version = 4
 
 [[package]]
-name = "cite-lint"
+name = "lintcite"
 version = "0.1.0"
 dependencies = [
- "cite-lint-core",
- "cite-lint-data",
- "cite-lint-host",
+ "lintcite-core",
+ "lintcite-data",
+ "lintcite-host",
 ]
 
 [[package]]
-name = "cite-lint-cli"
+name = "lintcite-cli"
 version = "0.1.0"
 dependencies = [
- "cite-lint",
+ "lintcite",
 ]
 
 [[package]]
-name = "cite-lint-core"
+name = "lintcite-core"
 version = "0.1.0"
 dependencies = [
- "cite-lint-data",
+ "lintcite-data",
 ]
 
 [[package]]
-name = "cite-lint-data"
+name = "lintcite-data"
 version = "0.1.0"
 
 [[package]]
-name = "cite-lint-host"
+name = "lintcite-host"
 version = "0.1.0"
 dependencies = [
- "cite-lint-core",
+ "lintcite-core",
 ]
 
 [[package]]
-name = "cite-lint-lsp"
+name = "lintcite-lsp"
 version = "0.1.0"
 dependencies = [
- "cite-lint",
+ "lintcite",
 ]

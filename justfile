@@ -24,4 +24,4 @@ cov:
 
 # Lint the repo's own docs as a smoke test of the CLI.
 selfcheck:
-    cargo run -p cite-lint-cli -- check testdata/e2e/memo.md
+    cargo run -p lintcite-cli -- check testdata/e2e/memo.md

@@ -1,4 +1,4 @@
-# cite-lint workspace — see CLAUDE.md for the architectural invariants and
+# lintcite workspace — see CLAUDE.md for the architectural invariants and
 # docs/roadmap/ for the plan of record.
 #
 # Dependency policy (P7, plan 08): zero external dependencies in the M1 slice.
@@ -10,19 +10,19 @@
 [workspace]
 resolver = "2"
 members = [
-    "crates/cite-lint-data",
-    "crates/cite-lint-core",
-    "crates/cite-lint-host",
-    "crates/cite-lint",
-    "crates/cite-lint-cli",
-    "crates/cite-lint-lsp",
+    "crates/lintcite-data",
+    "crates/lintcite-core",
+    "crates/lintcite-host",
+    "crates/lintcite",
+    "crates/lintcite-cli",
+    "crates/lintcite-lsp",
 ]
 
 [workspace.package]
 version = "0.1.0"
 edition = "2021"
 license = "Apache-2.0"
-repository = "https://github.com/russellbrenner/cite-lint"
+repository = "https://github.com/russellbrenner/lintcite"
 authors = ["Russell Brenner and contributors"]
 
 [profile.release]

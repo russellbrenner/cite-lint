@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# cite-lint verify pipeline (one-shot, idempotent). Logs everything to
+# lintcite verify pipeline (one-shot, idempotent). Logs everything to
 # .verify.log so the orchestrating session can read full output.
 set -uo pipefail
 export PATH="$HOME/.cargo/bin:$PATH"
@@ -22,13 +22,13 @@ LOG=.verify.log
   cargo test --workspace 2>&1
   echo "TEST_EXIT=$?"
   echo "--- e2e: check memo.md ---"
-  ./target/debug/cite-lint check testdata/e2e/memo.md 2>&1
+  ./target/debug/lintcite check testdata/e2e/memo.md 2>&1
   echo "E2E_CHECK_EXIT=$?"
   echo "--- e2e: json ---"
-  ./target/debug/cite-lint check --format json testdata/e2e/memo.md 2>&1 | head -c 800
+  ./target/debug/lintcite check --format json testdata/e2e/memo.md 2>&1 | head -c 800
   echo
   echo "--- e2e: fix ---"
-  ./target/debug/cite-lint fix testdata/e2e/memo.md 2>&1
+  ./target/debug/lintcite fix testdata/e2e/memo.md 2>&1
   echo "E2E_FIX_EXIT=$?"
   df -h /home | tail -1
   echo "=== verify done: $(date -Is) ==="

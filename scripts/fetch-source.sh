@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Fetch the source PDF for a cite-lint edition into the git-ignored cache and
+# Fetch the source PDF for a lintcite edition into the git-ignored cache and
 # verify it against the pinned SHA256 in data/editions/<id>/meta.toml.
 #
 # The PDF is third-party copyright and is NEVER committed. This script only

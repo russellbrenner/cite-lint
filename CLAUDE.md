@@ -1,4 +1,4 @@
-# cite-lint — Agent Guardrails
+# lintcite — Agent Guardrails
 
 A fast LSP server + CLI linter for the Australian Guide to Legal Citation (4th ed).
 This file holds the architectural invariants and rules an agent must not violate;
@@ -9,15 +9,15 @@ and intentionally git-ignored, not a source of truth.)
 
 ## Architectural invariants (do not break these)
 
-1. **The engine is format- and editor-agnostic.** `cite-lint-core` accepts a citation
+1. **The engine is format- and editor-agnostic.** `lintcite-core` accepts a citation
    string + kind hint + source range and returns diagnostics. It MUST NOT depend on
-   `cite-lint-host`, `cite-lint-lsp`, or `cite-lint-cli`. Dependency direction is one-way:
-   `cite-lint-data → cite-lint-core → {cite-lint-host} → {cite-lint-lsp, cite-lint-cli}`.
+   `lintcite-host`, `lintcite-lsp`, or `lintcite-cli`. Dependency direction is one-way:
+   `lintcite-data → lintcite-core → {lintcite-host} → {lintcite-lsp, lintcite-cli}`.
    If you find yourself importing a host or surface type into core, stop — the
    abstraction is wrong, fix the boundary instead.
 2. **Reference data before rules.** Every rule that consults a controlled vocabulary
    (reporters, courts, jurisdictions, signals, round/square-bracket rules) reads it
-   from `cite-lint-data`. Never hard-code a vocabulary inside a rule. Tables are versioned
+   from `lintcite-data`. Never hard-code a vocabulary inside a rule. Tables are versioned
    data files with a re-runnable extraction script and table-tests.
 3. **Per-citation isolation is the performance contract.** A citation is parsed and
    validated in isolation. Cross-citation logic lives ONLY in the document pass,
@@ -46,11 +46,11 @@ and intentionally git-ignored, not a source of truth.)
 ## Rust standards
 
 - Edition 2021+, `cargo fmt` and `cargo clippy -- -D warnings` clean before commit.
-- **No `unwrap()` / `expect()` / `panic!` in library crates** (`cite-lint-data`,
-  `cite-lint-core`, `cite-lint-host`). Return `Result`. Panics are acceptable only in tests
+- **No `unwrap()` / `expect()` / `panic!` in library crates** (`lintcite-data`,
+  `lintcite-core`, `lintcite-host`). Return `Result`. Panics are acceptable only in tests
   and in binary `main` startup where failure must abort.
 - Errors: typed errors with `thiserror` in libraries; `anyhow` only in the binary
-  crates (`cite-lint-lsp`, `cite-lint-cli`).
+  crates (`lintcite-lsp`, `lintcite-cli`).
 - Prefer `&str`/borrowed data through the parser; allocate at the edges.
 - Public items in library crates carry doc comments stating *what it does, how to
   use it, what it depends on*.

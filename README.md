@@ -1,4 +1,4 @@
-# cite-lint
+# lintcite
 
 A fast LSP server and CLI linter for the Australian Guide to Legal Citation (4th ed).
 
@@ -10,18 +10,22 @@ Architecture and guardrails: [`CLAUDE.md`](CLAUDE.md) · plan of record:
 [`docs/roadmap/`](docs/roadmap/README.md) · rule catalogue (generated):
 [`docs/rules.md`](docs/rules.md).
 
+> The project was renamed from `cite-lint` to `lintcite` on 2026-06-06. The
+> imported plan of record under `docs/roadmap/` predates the rename and keeps
+> the original name; crate names map 1:1 (`cite-lint-core` → `lintcite-core`).
+
 ## Quickstart (CLI)
 
 ```bash
 cargo build --workspace
-target/debug/cite-lint check your-memo.md         # lint (exit 1 on findings)
-target/debug/cite-lint fix your-memo.md           # corrected text to stdout
-target/debug/cite-lint explain AGLC4-CASE-001     # the rule behind a code
-target/debug/cite-lint check --format json -      # JSON from stdin, for CI
+target/debug/lintcite check your-memo.md         # lint (exit 1 on findings)
+target/debug/lintcite fix your-memo.md           # corrected text to stdout
+target/debug/lintcite explain AGLC4-CASE-001     # the rule behind a code
+target/debug/lintcite check --format json -      # JSON from stdin, for CI
 ```
 
 ```text
-$ cite-lint check memo.md
+$ lintcite check memo.md
 memo.md:9:31: error[AGLC4-CASE-001] year bracket should be round brackets for CLR: found square brackets (AGLC4 r 2.2.1)
     fix-it: '(1992)'
 ```
@@ -29,7 +33,7 @@ memo.md:9:31: error[AGLC4-CASE-001] year bracket should be round brackets for CL
 ## Quickstart (SDK)
 
 ```rust
-let diagnostics = cite_lint::lint("[^1]: Mabo v Queensland (No 2) [1992] 175 CLR 1.")?;
+let diagnostics = lintcite::lint("[^1]: Mabo v Queensland (No 2) [1992] 175 CLR 1.")?;
 assert_eq!(diagnostics[0].code.0, "AGLC4-CASE-001");
 ```
 

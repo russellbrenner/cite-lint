@@ -40,7 +40,7 @@ jobs:
       - name: CLI self-check (fixture must exit 1 with diagnostics)
         run: |
           set +e
-          cargo run -q -p cite-lint-cli -- check testdata/e2e/memo.md
+          cargo run -q -p lintcite-cli -- check testdata/e2e/memo.md
           code=$?
           set -e
           test "$code" -eq 1
